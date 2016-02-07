@@ -21,9 +21,11 @@
     <tbody>
         <tr>
             <td>
-                <%= image_tag @project_main_image.photo.url(:thumb) %>
-                <br>
-                <%= @project_main_image.caption %>
+                <% if @project_main_image != nil %>
+                    <%= image_tag @project_main_image.photo.url(:thumb) %>
+                    <br>
+                    <%= @project_main_image.caption %>
+                <% end %>
             </td>
         </tr>
     </tbody>
