@@ -1,0 +1,16 @@
+<h1> Edit Category </h1>
+
+<form action="/admin/categories/<%=@category.id%>" method="POST">
+	<input name="authenticity_token" value="<%= form_authenticity_token() %>" type="hidden">
+    <input type="hidden" name="_method" value="put" />
+    Category Name: <br>
+    <input value="<%=@category.name%>" name="name">
+    Assigned Project: <br>
+     <select name="project_id" id="project_id">
+		<% @projects.each do |p| %>
+			<option value="<%=p.id%>"><%=p.name%></option>
+		<% end %>
+ 	</select>
+	<input type="submit">
+</form>
+

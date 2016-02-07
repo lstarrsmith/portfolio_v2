@@ -1,0 +1,9 @@
+<form action="/admin/projects" method="POST">
+	<input name="authenticity_token" value="<%= form_authenticity_token() %>" type="hidden">
+    Project Name: <br>
+    <input value="Enter project name" name="name">
+    Short Description:
+    <input value="Enter short description" name="short_description">
+    	<br>
+	<input type="submit">
+</form>

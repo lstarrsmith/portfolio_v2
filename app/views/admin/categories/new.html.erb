@@ -1,0 +1,9 @@
+<h2>New Category</h2>
+<form action="/admin/projects/<%=@project.id%>/categories" method="POST">
+	<input name="authenticity_token" value="<%= form_authenticity_token() %>" type="hidden">
+    Category Name:
+    <br>
+    <input value="Enter category name" name="name">
+    	<br>
+	<input class="btn-primary" type="submit">
+</form>

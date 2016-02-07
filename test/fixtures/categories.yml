@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  projectID: 
+  has_subpage: false
+  name: MyString
+
+two:
+  projectID: 
+  has_subpage: false
+  name: MyString

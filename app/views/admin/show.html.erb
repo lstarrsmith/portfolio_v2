@@ -1,0 +1,35 @@
+<h1>Edit Admins</h1>
+	<ul>
+		<% @admins.each do |a| %>
+			<li> <%= a.fname %> <%= a.lname %>, <%= a.email %></li>
+		<% end %>
+	</ul>
+
+
+<h1>Edit Projects</h1> 
+<a class="new_entry" href="/admin/projects/new">New Project</a>
+<br>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Rank</th>
+				<th>Project Name</th>
+				<th>Info</th>
+				<th>Edit</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @projects.each do |p| %>
+			<tr>
+				<td> <%= p.rank %> </td>
+				<td> <%= p.name %> </td>
+				<td> <%= p.categories.count %> categories, <%= p.images.count %> images</td>
+				<td> <a href="/admin/projects/<%=p.id%>/edit">Edit</a> </td>
+				<td></td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+
+	
+

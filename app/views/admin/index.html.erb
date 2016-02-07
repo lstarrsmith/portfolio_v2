@@ -1,0 +1,15 @@
+<div class="wrapper_login">
+    <form class="form-signin" action="/session" method="POST">    
+      <h2 class="form-signin-heading">Please login</h2>
+        <% if @login_error == true %>
+          <h1 style="color:red"> Please login first! </h1><br>
+        <% end %>
+      <% if @error == true %>
+        <p style="color:red">Invalid login, please try again </p><br>
+       <% end %>
+      <input type="text" class="form-control" name="email" placeholder="Email Address" required="" autofocus="" />
+      <input type="password" class="form-control" name="password" placeholder="Password" required=""/>      
+      <input name="authenticity_token" value="<%= form_authenticity_token() %>" type="hidden">
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>   
+    </form>
+  </div>

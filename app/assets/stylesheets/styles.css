@@ -1,0 +1,128 @@
+body { 
+	padding-top: 50px; 
+	font-family: 'Montserrat', sans-serif;
+	color: black;
+	letter-spacing: 1.5px;
+	padding-bottom: 50px; /* for footer */
+}
+
+a:hover, button:hover {
+	cursor: pointer;
+}
+
+/********************* NAVIGATION BAR ******************/
+
+/*overriding background color on nav to white*/
+.navbar-default {
+	background-color: #ffffff;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: black;
+}
+
+/*fix pesky margin left of -15px on bootstrap min on navbar-brand*/
+@media (min-width:768px){
+	.navbar>.container .navbar-brand,.navbar>.container-fluid .navbar-brand{margin-left:0px}
+}
+
+/* Centering bootstrap nav not being easy...*/
+a.navbar-brand {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin: auto;
+}
+
+.navbar-default .navbar-brand {
+	color: black;
+}
+
+/*removing grey background when dropdown is active*/
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+	background-color: white;
+}
+@media (min-width: 768px)
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+     margin-left: 0px; 
+}
+
+/********************* HOME PAGE ******************/
+
+.project {
+	border-style: solid;
+	border-color: #e7e7e7;
+	border-width: 1px;
+	height: 450px;
+	padding: 0;
+	overflow: hidden;
+}
+.project_description {
+	position: absolute;
+	text-align: center;
+	background-color: white;
+	bottom: 0;
+	height: 100px;
+	width: 100%;
+	border-top: solid 1px #e7e7e7;
+}
+
+img { 
+  opacity: 0.85; 
+  transition: all 0.3s ease 0s;
+} 
+
+img:hover { 
+  opacity: 1; 
+  cursor: pointer;
+}
+
+.home_image {
+	width: 100%;
+}
+
+.nav-icon {
+	margin: 10px;
+}
+
+.project > a, a:hover, a:active {
+	color: black;
+}
+
+/********************* PROJECT PAGE ******************/
+
+.project_text {
+	font-family: "Avenir Next Condensed", sans-serif !important;
+	letter-spacing: 2px;
+	line-height: 150%;
+}
+
+.project_text > img {
+	display: block;
+	margin: auto;
+	border-radius: 5px;
+}
+.project_header {
+	text-align: center;
+}
+
+.gutter_right {
+	background-color: yellow:
+	height: 100%;
+}
+
+.image_caption {
+	font-size: 10px;
+}
+
+/********************* ADMIN ******************/
+
+.new_entry {
+	float: right;
+}
+
+input.project_main_image_checkbox {
+	display: block;
+	margin: auto;
+}

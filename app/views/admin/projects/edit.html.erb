@@ -1,0 +1,72 @@
+<h4> Edit Project </h4>
+
+<form action="/admin/projects/<%=@project.id%>" method="POST">
+	<input name="authenticity_token" value="<%= form_authenticity_token() %>" type="hidden">
+    <input type="hidden" name="_method" value="put" />
+    Project Name: <input value="<%=@project.name%>" name="name">
+    Project Description: <input value="<%=@project.short_description%>" name="short_description">
+	<input class="btn-primary" type="submit">
+    <br>
+    <br>
+</form>
+
+<h4> Project Image </h4>
+ 
+ <table class="table">
+    <thead> 
+        <tr>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <%= image_tag @project_main_image.photo.url(:thumb) %>
+                <br>
+                <%= @project_main_image.caption %>
+            </td>
+        </tr>
+    </tbody>
+</table> 
+
+<h4> Edit Categories </h4>
+
+<a class="new_entry btn-link" href="/admin/projects/<%=@project.id%>/categories/new">New Category</a>
+<table class="table">
+    <thead> 
+        <tr>
+            <th>Name</th>
+            <th>Project Text</th>
+            <th>Image Details</th>
+            <th>Save Changes</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @categories.each do |c| %>
+            <tr>
+                <form action="/admin/projects/<%=@project.id%>/categories/<%=c.id%>" method="POST">
+                    <input name="authenticity_token" value="<%= form_authenticity_token() %>" type="hidden">
+                    <input type="hidden" name="_method" value="put" />
+                    <input type="hidden" name="project_id_url" value="<%=@project.id%>" />
+                    <td><input value="<%=c.name%>" name="name"></td>
+                    <td> <textarea name="project_text" rows="10" cols="60"><%=c.project_text%></textarea> </td>
+                    <td><a href="/admin/projects/<%=@project.id%>/categories/<%=c.id%>/images"><%=c.images.count%> Images</a></td>
+                    <td> <input class="btn-link" type="submit" value="Save"> </td>
+                </form>
+                    <td>
+                         <form method="POST" action="/admin/projects/<%=@project.id%>/categories/<%=c.id%>">
+                            <input name="authenticity_token" value="<%= form_authenticity_token() %>" type="hidden">
+                            <input name="_method" value="DELETE" type="hidden">
+                            <button type="submit" class="btn-link">Delete</button>  
+                        </form>
+                    </td>  
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+
+
+
+
+

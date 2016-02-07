@@ -1,0 +1,58 @@
+<h4> Manage Images </h4>
+
+<a class="new_entry" href="/admin/projects/<%=@project.id%>/categories/<%=@category.id%>/images/new">New Image</a>
+
+<table class="table-bordered">
+    <thead> 
+        <tr>
+            <th>Image Name</th>
+            <th>Image</th>
+            <th>
+                Change Image 
+                <br>
+                (**must add file to change Project Main Image or Caption)
+            </th>
+            <th>Save Changes</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @images.each do |i| %>
+            <tr>
+                <%= form_for [:admin, @project, @category, i], :html => {:multipart => true} do |f| %>
+                    <td> <%= i.photo_file_name %> </td>
+                    <td> 
+                        <%= image_tag i.photo.url(:thumb) %>
+                        <br>
+                        <%= i.caption %>
+                    </td>
+                    <td> 
+                        Browse for new file:
+                        <br>
+                        <%= f.file_field :photo %>
+                        <br>
+                        Caption:
+                        <br> 
+                        <%= f.text_field :caption %>
+                        <br>
+                        <br>
+                        Project Main Image?: 
+                        <br>
+                        <%= f.text_field :project_main_image %>
+                    </td>
+                    <td> 
+                        <%= f.submit "Save", :class => "btn-link" %>
+                    </td>
+                <% end %>
+                    <td>
+                         <form method="POST" action="/admin/projects/<%=@project.id%>/categories/<%=@category.id%>/images/<%=i.id%>">
+                            <input name="authenticity_token" value="<%= form_authenticity_token() %>" type="hidden">
+                            <input name="_method" value="DELETE" type="hidden">
+                            <button class="btn-link submit">Delete</button>  
+                        </form>
+                    </td>
+                   
+            </tr>
+        <% end %>
+    </tbody>
+</table>
