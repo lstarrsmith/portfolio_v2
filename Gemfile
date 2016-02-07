@@ -20,7 +20,7 @@ gem 'pry-rails'
 
 gem 'httparty'
 
-gem "paperclip", "~> 4.3"
+gem "paperclip", "~> 4.2"
 
 # gem 'therubyracer', platforms: :ruby
 
