@@ -22,7 +22,6 @@ class Admin::ImagesController < ApplicationController
       @image.update(category_id: params['category_id'])
       @image.save
       redirect_to "/admin/projects/#{params['project_id']}/categories/#{params['category_id']}/images"
-     
   end
 
   def update
@@ -52,7 +51,7 @@ class Admin::ImagesController < ApplicationController
   end
 
   def image_params
-  	params.require(:image).permit(:photo, :caption, :project_main_image)
+  	params.require(:image).permit(:photo, :caption)
   end
 
   private
