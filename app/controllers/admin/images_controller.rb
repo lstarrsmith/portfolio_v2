@@ -51,7 +51,7 @@ class Admin::ImagesController < ApplicationController
   end
 
   def image_params
-  	params.require(:image).permit(:photo, :caption)
+  	params.require(:image).permit(:photo, :caption, :project_main_image)
   end
 
   private
