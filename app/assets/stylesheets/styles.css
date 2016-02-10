@@ -2,12 +2,15 @@ body {
 	padding-top: 50px; 
 	font-family: 'Montserrat', sans-serif;
 	color: black;
-	letter-spacing: 1.5px;
-	padding-bottom: 50px; /* for footer */
+	letter-spacing: 1.5px; 
 }
 
 a:hover, button:hover {
 	cursor: pointer;
+}
+
+.orange {
+	color: #FF5606;
 }
 
 /********************* NAVIGATION BAR ******************/
@@ -90,6 +93,23 @@ img:hover {
 	color: black;
 }
 
+a.dropdown-toggle {
+	text-transform: uppercase;
+}
+
+.footer {
+    height: 60px;
+   	margin-top: 100px;
+    text-align: center;
+    border-style: solid;
+	border-color: #e7e7e7;
+	border-width: 1px;
+}
+
+.footer-container {
+	padding-top: 20px;
+}
+
 /********************* PROJECT PAGE ******************/
 
 .project_text {
@@ -108,7 +128,7 @@ img:hover {
 }
 
 .gutter_right {
-	background-color: yellow:
+	background-color: yellow;
 	height: 100%;
 }
 

@@ -30,6 +30,9 @@ human_connect = Project.create({rank: 12, name: "Human Connect", short_descripti
 digital_health_product_hunt = Project.create({rank: 13, name: "Digital Health Product Hunt", short_description: "Crowdsourced rankings for digital health products by therapeutic area", has_subsection: false})
 contact_app = Project.create({rank: 14, name: "Contact App", short_description: "A foray into front-end frameworks; contact management app", has_subsection: false})
 
+#hack so dropdown shows all work on welcome#index
+all_work = Project.create({name: "All Work"})
+
 #Category
 
 problem = Category.create({project_id: 1, name: "Problem", project_text: "Health data isn’t accessible to all players -- government officials, donors, implementing partners -- in the global health space."})
