@@ -25,8 +25,11 @@ a:hover, button:hover {
 }
 
 /*fix pesky margin left of -15px on bootstrap min on navbar-brand*/
-@media (min-width:768px){
-	.navbar>.container .navbar-brand,.navbar>.container-fluid .navbar-brand{margin-left:0px}
+@media (min-width:768px) {
+	.navbar>.container .navbar-brand,.navbar>.container-fluid .navbar-brand
+	{
+		margin-left:0px;
+	}
 }
 
 /* Centering bootstrap nav not being easy...*/
