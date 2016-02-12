@@ -68,7 +68,14 @@ a.navbar-brand > img {
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
-	
+
+/*for mobile, show selected dropdown option*/
+@media (max-width: 768px) {
+	.dropdown-menu > li > a:active {
+		color: #FF5606;
+	}	
+}
+
 /*hide contact and move brand from center to right*/
 @media (max-width: 768px) {
 	#nav_contact {
