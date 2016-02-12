@@ -1,6 +1,7 @@
 body { 
 	padding-top: 50px; 
 	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
 	color: black;
 	letter-spacing: 1.5px; 
 }
@@ -39,6 +40,13 @@ a.navbar-brand {
     left: 0;
     text-align: center;
     margin: auto;
+    font-size: 15px;
+}
+
+a.navbar-brand > img {
+    display: inline;
+    padding-bottom: 4px;
+    margin-right: 1px;
 }
 
 .navbar-default .navbar-brand {
@@ -48,12 +56,28 @@ a.navbar-brand {
 /*removing grey background when dropdown is active*/
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
 	background-color: white;
+	color: #FF5606;
 }
 @media (min-width: 768px)
 .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
      margin-left: 0px; 
 }
 
+/*spacing for dropdown elements*/
+.dropdown-menu > li > a {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+	
+/*hide contact and move brand from center to right*/
+@media (max-width: 768px) {
+	#nav_contact {
+	display: none;
+	}
+	a.navbar-brand {
+		text-align: right;
+	}
+}
 /********************* HOME PAGE ******************/
 
 .project {
@@ -125,7 +149,7 @@ a.dropdown-toggle {
 	font-family: 'Raleway', 'Avenir Next', 'Helvetica', sans-serif;
 	letter-spacing: 2px;
 	line-height: 150%;
-	font-size: 18px;
+	font-size: 20px;
 }
 
 .project_text > img {
@@ -143,7 +167,7 @@ a.dropdown-toggle {
 }
 
 .image_caption {
-	font-size: 14px;
+	font-size: 15px;
 }
 
 /********************* ADMIN ******************/
