@@ -65,6 +65,8 @@ a.navbar-brand {
 	overflow: hidden;
 }
 .project_description {
+	font-family: 'Raleway', 'Avenir Next', 'Helvetica', sans-serif;
+	letter-spacing: 2px;
 	position: absolute;
 	text-align: center;
 	background-color: white;
@@ -72,6 +74,10 @@ a.navbar-brand {
 	height: 100px;
 	width: 100%;
 	border-top: solid 1px #e7e7e7;
+}
+
+.project_description > h4 {
+	font-weight: 500;
 }
 
 img { 
@@ -116,9 +122,10 @@ a.dropdown-toggle {
 /********************* PROJECT PAGE ******************/
 
 .project_text {
-	font-family: "Avenir Next Condensed", sans-serif !important;
+	font-family: 'Raleway', 'Avenir Next', 'Helvetica', sans-serif;
 	letter-spacing: 2px;
 	line-height: 150%;
+	font-size: 18px;
 }
 
 .project_text > img {
@@ -136,7 +143,7 @@ a.dropdown-toggle {
 }
 
 .image_caption {
-	font-size: 10px;
+	font-size: 14px;
 }
 
 /********************* ADMIN ******************/

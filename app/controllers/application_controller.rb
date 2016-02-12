@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   
   before_filter :project_list
   def project_list
-  	@project_list = Project.where.not(name: "All Work").order(:rank)
+  	@project_list = Project.all.order(:rank)
   	if params['id'] != nil
   		@project = Project.find_by(id: params['id'])
   	elsif params['action'] == "index"

@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
 
 	def show
 		@project = Project.find_by(id: params["id"])
-		@categories = @project.categories
+		@categories = @project.categories.where.not(name: "Project Main Image").sort
 		@images= []
 		@categories.each do |c|
 			if c.images != nil

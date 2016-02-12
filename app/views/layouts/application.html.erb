@@ -10,8 +10,9 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
  
   	<%= csrf_meta_tags %>
+   <link href='https://fonts.googleapis.com/css?family=Raleway:200,800' rel='stylesheet' type='text/css'>
 
-  	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,500' rel='stylesheet' type='text/css'>
     <!-- Bootstrap -->
    
 
@@ -65,7 +66,19 @@
 
   <footer class="footer col-xs-12 col-sm-12 col-md-12 col-lg-12">
     <div class="container footer-container">
-    Made by <span class="orange">Logan</span> in <span class="orange">Kampala</span>
+    Made by <span class="orange">Logan</span> from <span class="orange">Kampala</span>
+    <ul class="social-media">
+        <li class="pull-right">
+           <%=image_tag("github.png")%>
+        </li> 
+        <li class="pull-right">
+           <%=image_tag("post-twitter.png")%>
+        </li> 
+        <li class="pull-right">
+           <%=image_tag("linkedin.png")%>
+        </li> 
+       
+    </ul>
     </div>
   </footer>
   </body>
