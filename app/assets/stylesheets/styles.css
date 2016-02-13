@@ -1,13 +1,12 @@
 body { 
 	padding-top: 50px; 
 	font-family: 'Montserrat', sans-serif;
-	font-size: 15px;
-	color: black;
 	letter-spacing: 1.5px; 
 }
 
 a:hover, button:hover {
 	cursor: pointer;
+	
 }
 
 .orange {
@@ -15,15 +14,6 @@ a:hover, button:hover {
 }
 
 /********************* NAVIGATION BAR ******************/
-
-/*overriding background color on nav to white*/
-.navbar-default {
-	background-color: #ffffff;
-}
-
-.navbar-default .navbar-nav>li>a {
-    color: black;
-}
 
 /*fix pesky margin left of -15px on bootstrap min on navbar-brand*/
 @media (min-width:768px) {
@@ -49,10 +39,6 @@ a.navbar-brand > img {
     margin-right: 1px;
 }
 
-.navbar-default .navbar-brand {
-	color: black;
-}
-
 /*removing grey background when dropdown is active*/
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
 	background-color: white;
@@ -69,7 +55,7 @@ a.navbar-brand > img {
 	padding-bottom: 5px;
 }
 
-/*for mobile, show selected dropdown option*/
+/*for mobile, show selected dropdown option -- is this working?*/
 @media (max-width: 768px) {
 	.dropdown-menu > li > a:active {
 		color: #FF5606;
@@ -102,6 +88,7 @@ a.navbar-brand > img {
 	text-align: center;
 	background-color: white;
 	bottom: 0;
+	font-weight: 200;
 	height: 100px;
 	width: 100%;
 	border-top: solid 1px #e7e7e7;
@@ -112,7 +99,7 @@ a.navbar-brand > img {
 }
 
 img { 
-  opacity: 0.85; 
+  opacity: 0.95; 
   transition: all 0.3s ease 0s;
 } 
 
@@ -129,14 +116,17 @@ img:hover {
 	margin: 10px;
 }
 
-.project > a, a:hover, a:active {
+/* home page links on each project stay black*/
+.project > a, .project > a:hover, .project > a:active {
 	color: black;
 }
 
+/* when selected, dropdown option appears as uppercase to match nav */
 a.dropdown-toggle {
 	text-transform: uppercase;
 }
 
+/*problem with footer is that on pages with no content, it's not at bottom*/
 .footer {
     height: 60px;
    	margin-top: 100px;
@@ -164,17 +154,82 @@ a.dropdown-toggle {
 	margin: auto;
 	border-radius: 5px;
 }
+
 .project_header {
 	text-align: center;
 }
 
-.gutter_right {
-	background-color: yellow;
-	height: 100%;
-}
-
 .image_caption {
 	font-size: 15px;
+}
+
+/******************* LOADING ICON ****************/
+
+
+.loader {
+  display: block;
+  width: 122px;
+  margin: 100px auto;
+}
+.loader_circle {
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  border-radius: 50%;
+  background: #000;
+  display: inline-block;
+}
+.loader_circle:first-child {
+  animation: move 1s ease-in-out infinite alternate;
+  background: #000000;
+  margin-left: 0;
+}
+.loader_circle:nth-child(2) {
+  animation: move 1s ease-in-out -0.25s infinite alternate;
+  margin-left: 35px;
+  background: #000000;
+}
+.loader_circle:nth-child(3) {
+  animation: move 1s ease-in-out -0.5s infinite alternate;
+  margin-left: 70px;
+  background: #000000;
+}
+.loader_circle:nth-child(4) {
+  animation: move 1s ease-in-out -0.75s infinite alternate;
+  margin-left: 105px;
+  background: #FF5606;
+}
+@-moz-keyframes move {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+@-webkit-keyframes move {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+@-o-keyframes move {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+@keyframes move {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
 }
 
 /********************* ADMIN ******************/
