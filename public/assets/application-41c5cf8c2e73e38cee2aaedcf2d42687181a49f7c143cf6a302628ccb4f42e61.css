@@ -107,6 +107,27 @@ a.navbar-brand > img {
 		text-align: right;
 	}
 }
+
+.caret-right {
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
+    border-left: 4px solid #000;
+    display: inline-block;
+    height: 0;
+    vertical-align: middle;
+    width: 0;
+}
+
+.navmenu-default .navmenu-nav>li>a:hover {
+  background: #F3F1F1;
+}
+
+.navbar-default .navbar-toggle, .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #fff;
+    border-color: #fff;
+    cursor: pointer;
+    margin-bottom: 0;
+}
 /********************* HOME PAGE ******************/
 
 .project {

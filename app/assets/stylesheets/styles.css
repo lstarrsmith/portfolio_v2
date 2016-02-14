@@ -84,6 +84,7 @@ a.navbar-brand > img {
     background-color: #fff;
     border-color: #fff;
     cursor: pointer;
+    margin-bottom: 0;
 }
 /********************* HOME PAGE ******************/
 
