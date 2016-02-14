@@ -18,19 +18,8 @@ $(document).ready(function(){
 // call the showPageAfterLoad function. Then we set window.images_loaded = true so that on subsequent page changes, we
 // fire the same sequence but tie it to page:load... it's important to note that page:load doesn't fire on the initial page 
 // load for some reason, which is why we have to break it up
-// $(document).on('page:change', function() {
-// 	if (window.images_loaded === true) {
-// 		showLoader();
-// 		showPageAfterLoad();
-// 	} else {
-// 		showLoader();
-// 		$('#page_content img').last().bind('load', function() {
-// 			showPage()
-// 			window.images_loaded = true
-// 		});
-// 	}
-// 	$('.dropdown-toggle').dropdown()
-// })
+
+// The page:load fires only when a particular piece of markup (body or partial replacement) is inserted in the DOM for the first time
 
 $(document).on('page:change', function() {
 	if (window.images_loaded != true) {
@@ -38,7 +27,7 @@ $(document).on('page:change', function() {
 	} else {
 		console.log("is this working")
 		showLoader();
-		showPageAfterLoad();
+		showPage();
 	}
 	$('.dropdown-toggle').dropdown()
 })
