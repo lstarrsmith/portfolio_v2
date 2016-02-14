@@ -66,8 +66,12 @@ a.navbar-brand > img {
 	}
 	a.navbar-brand {
 		text-align: right;
-    padding-top: 17px;
+    padding-top: 16px;
 	}
+  .nav, .navbar {
+    position: fixed;
+    top: 0;
+  }
 }
 
 /******************* NAV MENU ON THE LEFT ******/
