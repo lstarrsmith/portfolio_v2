@@ -53,7 +53,10 @@ a.navbar-brand > img {
 @media (max-width: 768px) {
 	.dropdown-menu > li > a:active {
 		color: #FF5606;
-	}	
+	}
+  .navbar-default .navbar-toggle {
+    margin-top: 0;
+  }
 }
 
 /*hide contact and move brand from center to right*/
@@ -85,6 +88,7 @@ a.navbar-brand > img {
     border-color: #fff;
     cursor: pointer;
     margin-bottom: 0;
+    text-transform: uppercase;
 }
 /********************* HOME PAGE ******************/
 
@@ -96,6 +100,7 @@ a.navbar-brand > img {
 	padding: 0;
 	overflow: hidden;
 }
+
 .project_description {
 	font-family: 'Raleway', 'Avenir Next', 'Helvetica', sans-serif;
 	letter-spacing: 2px;
@@ -134,11 +139,6 @@ img:hover {
 /* home page links on each project stay black*/
 .project > a, .project > a:hover, .project > a:active {
 	color: black;
-}
-
-/* when selected, dropdown option appears as uppercase to match nav */
-a.dropdown-toggle {
-	text-transform: uppercase;
 }
 
 /*problem with footer is that on pages with no content, it's not at bottom*/
