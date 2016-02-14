@@ -35,12 +35,14 @@
       			</a>
     		</div>
       		<ul class="nav navbar-nav navbar-header pull-left">
-	      		<li class="navbar-toggle pull-left" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
+	      		<li>
+              <a href="#" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
               <% if @project != nil %>
                 <%=@project.name%> <span class="caret-right"></span>
               <% else %>
                   <%= @p %> <span class="caret-right"></span>
               <% end %>
+              </a>
             </li>
 		      </ul>
       		<ul class="nav navbar-nav navbar-header pull-right">

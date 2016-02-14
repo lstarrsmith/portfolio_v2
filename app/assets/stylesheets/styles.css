@@ -66,8 +66,11 @@ a.navbar-brand > img {
 	}
 	a.navbar-brand {
 		text-align: right;
+    padding-top: 17px;
 	}
 }
+
+/******************* NAV MENU ON THE LEFT ******/
 
 .caret-right {
     border-bottom: 4px solid transparent;
@@ -90,6 +93,15 @@ a.navbar-brand > img {
     margin-bottom: 0;
     text-transform: uppercase;
 }
+
+body.canvas-slid {
+  overflow: hidden;
+}
+
+.navmenu .canvas-slid {
+  overflow: auto;
+}
+
 /********************* HOME PAGE ******************/
 
 .project {
