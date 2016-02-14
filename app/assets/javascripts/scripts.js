@@ -23,9 +23,7 @@ $(document).ready(function(){
 
 $(document).on('page:change', function() {
 	if (window.images_loaded != true) {
-		console.log("page:change do nothing")
 	} else {
-		console.log("is this working")
 		showLoader();
 		showPage();
 	}

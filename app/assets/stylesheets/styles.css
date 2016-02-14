@@ -6,7 +6,6 @@ body {
 
 a:hover, button:hover {
 	cursor: pointer;
-	
 }
 
 .orange {
@@ -123,12 +122,13 @@ a.dropdown-toggle {
 
 /*problem with footer is that on pages with no content, it's not at bottom*/
 .footer {
-    height: 60px;
-   	margin-top: 100px;
-    text-align: center;
-    border-style: solid;
-	border-color: #e7e7e7;
-	border-width: 1px;
+  height: 125px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.footer img {
+  margin-bottom: 10px;
 }
 
 .footer-container {
@@ -230,6 +230,45 @@ a.dropdown-toggle {
   100% {
     transform: translateY(5px);
   }
+}
+
+/********************* ABOUT ******************/
+
+#about_contact {
+  font-family: 'Raleway', 'Avenir Next', 'Helvetica', sans-serif;
+  letter-spacing: 2px;
+  line-height: 150%;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#about_contact img {
+  margin-bottom: 10px;
+}
+
+.section_divider {
+  display: block;
+  border-top: 1px solid #e7e7e7;
+  width: 60%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact_subheader {
+  font-weight: 800;
+  color: #BABABA;
+  margin-bottom: 15px;
+}
+
+.social-github {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#about_text {
+  text-align: left;
 }
 
 /********************* ADMIN ******************/
