@@ -166,10 +166,15 @@ a.dropdown-toggle {
 /******************* LOADING ICON ****************/
 
 
-.loader {
+#loader {
   display: block;
   width: 122px;
   margin: 100px auto;
+  position: fixed;  
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 .loader_circle {
   height: 15px;
@@ -187,17 +192,17 @@ a.dropdown-toggle {
 .loader_circle:nth-child(2) {
   animation: move 1s ease-in-out -0.25s infinite alternate;
   margin-left: 35px;
-  background: #000000;
+  background: #FF5606;
 }
 .loader_circle:nth-child(3) {
   animation: move 1s ease-in-out -0.5s infinite alternate;
   margin-left: 70px;
-  background: #000000;
+  background: #FF5606;
 }
 .loader_circle:nth-child(4) {
   animation: move 1s ease-in-out -0.75s infinite alternate;
   margin-left: 105px;
-  background: #FF5606;
+  background: #000000;
 }
 @-moz-keyframes move {
   0% {
