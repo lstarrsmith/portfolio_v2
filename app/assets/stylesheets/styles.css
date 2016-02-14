@@ -17,8 +17,7 @@ a:hover, button:hover {
 
 /*fix pesky margin left of -15px on bootstrap min on navbar-brand*/
 @media (min-width:768px) {
-	.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand
-	{
+	.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand{
 		margin-left:0px;
 	}
 }
@@ -43,10 +42,6 @@ a.navbar-brand > img {
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
 	background-color: white;
 	color: #FF5606;
-}
-@media (min-width: 768px)
-.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
-     margin-left: 0px; 
 }
 
 /*spacing for dropdown elements*/
