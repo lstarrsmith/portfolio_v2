@@ -1,4 +1,16 @@
 
+$(document).ready(function(){
+	if (window.images_loaded != true) {
+		showLoader();
+		$('#page_content img').last().bind('load', function() {
+			showPage()
+			window.images_loaded = true
+		});
+	} else {
+		console.log("document ready do nothing")
+	};
+})
+
 // turbolinks requires page:change and page:load events, as images are technically already loaded 
 // after the initial page load, they're just replaced with ajax. So the logic here is that on the initial
 // page load, page:change fires and shows the loading image, then when the last image loads, we call showPage()
@@ -6,16 +18,27 @@
 // call the showPageAfterLoad function. Then we set window.images_loaded = true so that on subsequent page changes, we
 // fire the same sequence but tie it to page:load... it's important to note that page:load doesn't fire on the initial page 
 // load for some reason, which is why we have to break it up
+// $(document).on('page:change', function() {
+// 	if (window.images_loaded === true) {
+// 		showLoader();
+// 		showPageAfterLoad();
+// 	} else {
+// 		showLoader();
+// 		$('#page_content img').last().bind('load', function() {
+// 			showPage()
+// 			window.images_loaded = true
+// 		});
+// 	}
+// 	$('.dropdown-toggle').dropdown()
+// })
+
 $(document).on('page:change', function() {
-	if (window.images_loaded === true) {
+	if (window.images_loaded != true) {
+		console.log("page:change do nothing")
+	} else {
+		console.log("is this working")
 		showLoader();
 		showPageAfterLoad();
-	} else {
-		showLoader();
-		$('#page_content img').last().bind('load', function() {
-			showPage()
-			window.images_loaded = true
-		});
 	}
 	$('.dropdown-toggle').dropdown()
 })
