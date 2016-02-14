@@ -91,7 +91,10 @@ a.navbar-brand > img {
     border-color: #fff;
     cursor: pointer;
     margin-bottom: 0;
-    text-transform: uppercase;
+}
+
+#navmenu_selection {
+  text-transform: uppercase;
 }
 
 body.canvas-slid {
