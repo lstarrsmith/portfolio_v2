@@ -17,7 +17,7 @@ a:hover, button:hover {
 /*fix pesky margin left of -15px on bootstrap min on navbar-brand*/
 @media (min-width:768px) {
 	.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand{
-		margin-left:0px;
+		margin-left:0;
 	}
 }
 
@@ -68,10 +68,6 @@ a.navbar-brand > img {
 		text-align: right;
     padding-top: 16px;
 	}
-  .nav, .navbar {
-    position: fixed;
-    top: 0;
-  }
 }
 
 /******************* NAV MENU ON THE LEFT ******/
@@ -290,10 +286,7 @@ img:hover {
   display: block;
   border-top: 1px solid #e7e7e7;
   width: 60%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 20px auto 20px auto;
 }
 
 .contact_subheader {
@@ -317,7 +310,7 @@ img:hover {
 	float: right;
 }
 
-input.project_main_image_checkbox {
+.project_main_image_checkbox {
 	display: block;
 	margin: auto;
 }

@@ -1,6 +1,6 @@
 module ApplicationHelper
 	def markdown(text)
-	    if text
+		if text
 		    options = {
 		      filter_html:     true,
 		      hard_wrap:       true, 
@@ -20,5 +20,5 @@ module ApplicationHelper
 
 		    markdown.render(text).html_safe
 		end
-  	end	
+	end	
 end

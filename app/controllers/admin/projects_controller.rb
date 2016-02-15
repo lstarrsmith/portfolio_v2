@@ -35,7 +35,7 @@ class Admin::ProjectsController < ApplicationController
 		end
 		@admin = Admin.find_by(id: params["admin_id"])
       	redirect_to "/admin/#{session['admin_id']}"
-    end
+	end
 
 	private
 

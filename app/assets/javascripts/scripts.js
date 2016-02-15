@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-	if (window.images_loaded != true) {
+	if (window.images_loaded !== true) {
 		showLoader();
 		$('#page_content img').last().bind('load', function() {
 			showPage()
@@ -8,7 +8,7 @@ $(document).ready(function(){
 		});
 	} else {
 		console.log("document ready do nothing")
-	};
+	}
 })
 
 // turbolinks requires page:change and page:load events, as images are technically already loaded 
@@ -22,7 +22,7 @@ $(document).ready(function(){
 // The page:load fires only when a particular piece of markup (body or partial replacement) is inserted in the DOM for the first time
 
 $(document).on('page:change', function() {
-	if (window.images_loaded != true) {
+	if (window.images_loaded !== true) {
 	} else {
 		showLoader();
 		showPage();
