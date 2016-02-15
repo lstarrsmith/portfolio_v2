@@ -102,7 +102,9 @@ body.canvas-slid {
 }
 
 .navmenu .canvas-slid {
-  overflow: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch; 
+
 }
 
 /********************* HOME PAGE ******************/
