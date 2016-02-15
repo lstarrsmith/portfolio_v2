@@ -6,8 +6,6 @@ $(document).ready(function(){
 			showPage()
 			window.images_loaded = true
 		});
-	} else {
-		console.log("document ready do nothing")
 	}
 })
 
@@ -21,14 +19,14 @@ $(document).ready(function(){
 
 // The page:load fires only when a particular piece of markup (body or partial replacement) is inserted in the DOM for the first time
 
-$(document).on('page:change', function() {
-	if (window.images_loaded !== true) {
-	} else {
-		showLoader();
-		showPage();
-	}
-	$('.dropdown-toggle').dropdown()
-})
+// $(document).on('page:change', function() {
+// 	if (window.images_loaded !== true) {
+// 	} else {
+// 		showLoader();
+// 		showPage();
+// 	}
+// 	$('.dropdown-toggle').dropdown()
+// })
 
 // putting the selection at the top right before the page refreshes
 $(".dropdown-menu li a").click(function(){
@@ -43,12 +41,12 @@ function showLoader() {
 	$('#loader').show();
 }
 
-function showPageAfterLoad() {
-	$(document).on('page:load', function() {
-		$('#loader').hide();
-		$('#page_content').fadeIn('1000');
-	})
-}
+// function showPageAfterLoad() {
+// 	$(document).on('page:load', function() {
+// 		$('#loader').hide();
+// 		$('#page_content').fadeIn('1000');
+// 	})
+// }
 
 function showPage() {
 	$('#loader').hide();
