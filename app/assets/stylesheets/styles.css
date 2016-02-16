@@ -51,11 +51,13 @@ a.navbar-brand > img {
 
 /*for mobile, show selected dropdown option -- is this working?*/
 @media (max-width: 768px) {
-	.dropdown-menu > li > a:active {
-		color: #FF5606;
-	}
+  .nav
   .navbar-default .navbar-toggle {
     margin-top: 0;
+  }
+  .navmenu li>a {
+    padding-top: 7px;
+    padding-bottom: 7px;
   }
 }
 
