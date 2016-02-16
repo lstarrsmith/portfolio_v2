@@ -12,7 +12,9 @@
 //
 // require_tree
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
+//= require imagesloaded.min
 //= require bootstrap.min
 //= require jasny-bootstrap.min
 //= require scripts
