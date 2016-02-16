@@ -101,10 +101,15 @@ body.canvas-slid {
   overflow: hidden;
 }
 
-.navmenu .canvas-slid {
+/*.navmenu .canvas-slid {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch; 
 
+}*/
+
+.navmenu.navmenu-default.navmenu-fixed-left.offcanvas.in.canvas-slid {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 /********************* HOME PAGE ******************/
