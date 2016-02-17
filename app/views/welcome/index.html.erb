@@ -1,6 +1,6 @@
 <!-- <div id="page_content"> -->
 	<div id="projects_images">
-	<% @projects[0..5].each_with_index do |p, i| %>
+	<% @projects[0..9].each_with_index do |p, i| %>
 		<div class="project col-sm-6 col-md-4">
 			<a href="/projects/<%=p.id%>">
 				<%= image_tag(@images[i].photo.url(:large), :class => "home_image") %>
