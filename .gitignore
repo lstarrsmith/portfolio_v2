@@ -11,6 +11,10 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
+# ignore seeds data
+/db/seeds.rb
+
+
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep
