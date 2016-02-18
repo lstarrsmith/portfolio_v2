@@ -146,12 +146,12 @@ body.canvas-slid {
 	font-weight: 700;
 }
 
-img { 
+.project img { 
   opacity: 0.95; 
   transition: all 0.3s ease 0s;
 } 
 
-img:hover { 
+.project img:hover { 
   opacity: 1; 
   cursor: pointer;
 }
