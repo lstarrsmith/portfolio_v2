@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
 	def index
-		@projects = Project.all.sort
+		@projects = Project.all.order(:rank)
 		@images = []
 		@projects.map do |p|
 			if p.images.find_by(project_main_image: true) != nil

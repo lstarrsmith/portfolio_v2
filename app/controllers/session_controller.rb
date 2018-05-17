@@ -3,6 +3,8 @@ class SessionController < ApplicationController
 	def create
 		admin = Admin.find_by({email: params["email"]})
 		if admin && admin.authenticate(params["password"])
+		# admin.authenticate not working for some reason
+		# if admin
 			@error = false
 			session["admin_id"] = admin.id
 			redirect_to "/admin/#{admin.id}"
