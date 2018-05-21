@@ -121,9 +121,9 @@ body.canvas-slid {
 /********************* HOME PAGE ******************/
 
 .project {
-	border-style: solid;
-	border-color: #e7e7e7;
-	border-width: 1px;
+	border-right: 15px solid white;
+  border-left: 15px solid white;
+  border-bottom: 15px solid white;
 	height: 450px;
 	padding: 0;
 	overflow: hidden;
@@ -139,7 +139,7 @@ body.canvas-slid {
 	font-weight: 200;
 	height: 100px;
 	width: 100%;
-	border-top: solid 1px #e7e7e7;
+/*	border-top: solid 1px #e7e7e7;*/
 }
 
 .project_description > h4 {
