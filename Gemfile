@@ -16,6 +16,8 @@ gem 'coffee-rails', '~> 4.1.0'
 # Debugging tools for rails console
 gem 'pry'
 
+gem 'sprockets', '~> 3.7.2'
+
 gem 'jquery-turbolinks'
 
 gem 'pry-rails'
