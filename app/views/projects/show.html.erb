@@ -6,24 +6,19 @@
 		<h3> <%= @project.name %> </h3>
 		<p><%= @project.short_description %></p>
 	</div>
-
+	<div class="section_divider"></div>
 	<% @categories.each do |c| %>
-
-		<br>
 		<br>
 		<h4><strong><%= c.name %></strong></h4>
 		<br>
 		<p><%= markdown(c.project_text) %></p>
 		<br>
-
 		<% @images.each do |i| %>
-		<% if i.category_id == c.id %>
-			<%= image_tag(i.photo.url(:large), :class => "img-responsive") %>
-			<p class="image_caption text-center"><%= i.caption %></p>
-		<% end %>
-
-	<% end %> 
-
+			<% if i.category_id == c.id %>
+				<%= image_tag(i.photo.url(:large), :class => "img-responsive") %>
+				<p class="image_caption text-center"><%= i.caption %></p>
+			<% end %>
+		<% end %> 
 	<% end %> 
 </div>
 <div class="col-xs-1 col-sm-1 col-md-3"></div>
